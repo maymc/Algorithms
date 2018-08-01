@@ -1,4 +1,4 @@
-let testArr = [5, 3, 8, 4, 1, 9, 6];
+//let testArr = [5, 3, 8, 4, 1, 9, 6];
 
 function mergeSort(arr) {
   console.log("CHECK - array: ", arr);
@@ -27,7 +27,7 @@ function mergeSort(arr) {
   return merge(mergeSort(left), mergeSort(right));
 }
 
-mergeSort(testArr);
+// mergeSort(testArr);
 
 function merge(leftArr, rightArr) {
   let sorted = [];
