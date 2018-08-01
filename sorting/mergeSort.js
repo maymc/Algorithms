@@ -32,6 +32,7 @@ mergeSort(testArr);
 function merge(leftArr, rightArr) {
   let sorted = [];
 
+  //While the left array and right array both have elements in them
   while (leftArr.length !== 0 && rightArr.length !== 0) {
     if (leftArr[0] <= rightArr[0]) {
       //If the left element is smaller than the right element, shift it out of the array and push it into the sorted array
@@ -43,16 +44,21 @@ function merge(leftArr, rightArr) {
     }
   }
 
+  //While the right array is empty, add the rest of the left array elements to the sorted array
   while (leftArr.length !== 0) {
     sorted.push(leftArr.shift());
   }
 
+  //While the left array is emptyk add the rest of the right array elements to the sorted array
   while (rightArr.length !== 0) {
     sorted.push(rightArr.shift());
   }
 
-  console.log(sorted);
+  // console.log(sorted);
+
+  //Return the sorted left and right halves
   return sorted;
 }
 
+module.exports = mergeSort;
 
